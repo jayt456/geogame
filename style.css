@@ -1,0 +1,50 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#hud {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+  background: #111827;
+  color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.prompt .label { color: #9ca3af; margin-right: 8px; }
+.prompt #prompt-name { font-size: 20px; font-weight: 600; }
+
+.controls { display: flex; align-items: center; gap: 16px; }
+#result { font-variant-numeric: tabular-nums; }
+#result.good  { color: #34d399; }
+#result.okay  { color: #fbbf24; }
+#result.bad   { color: #f87171; }
+
+#next-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#next-btn:disabled { background: #4b5563; cursor: not-allowed; }
+#next-btn:not(:disabled):hover { background: #2563eb; }
+
+.score { color: #9ca3af; font-size: 14px; }
+
+#map {
+  position: absolute;
+  top: 64px; left: 0; right: 0; bottom: 0;
+  cursor: crosshair;
+}
